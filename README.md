@@ -1,21 +1,20 @@
 # react-fontawesome-svg-import
 
-Generates a Reactjs module from fontawesome raw svgs. The generated module is of the format:
+Generates a Reactjs module from Font Awesome raw svgs. The generated module is of the format:
 
 ```
 import React from "react";
 
-const BrandsSlack = ( {className} ) => <svg className={className || } ... ><path .... /></svg>;
+const BrandsSlackHash = ( {className} ) => <svg className={className || } ... ><path .... /></svg>;
 const LightArrowAltUp = ( {className} ) => <svg className={className || } ... ><path .... /></svg>;
 
 export {
-  BrandsSlack,
+  BrandsSlackHash,
   LightArrowAltUp,
 }
-
 ```
 
-I.e. the modules are a module case concatenation of their file name and their parent directory.
+I.e. the modules are a module case concatenation of their file name and their parent directory. For example `.../brands/slack-hack.svg` gets the name `BrandsSlackHash`.
 
 
 ### Example Usage
