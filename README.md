@@ -58,7 +58,7 @@ const moduleCase = str => {
 
 class SVGIcon extends Component {
   render() {
-    const { type = "regular", name = "affiliatetheme" } = this.props;
+    const { type = "regular", name = "image" } = this.props;
     const IconClass = Icons[moduleCase(`${type}-${name}`)];
     return (
       <span className="displayInlineFlex heightAdjust widthAdjust">
@@ -69,7 +69,6 @@ class SVGIcon extends Component {
 }
 
 export default SVGIcon;
-
 ```
 
 ```
