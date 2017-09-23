@@ -40,7 +40,7 @@ I.e. the modules are a module case concatenation of their file name and their pa
 
 ```
 
-In route you'd run `node ./scripts/generate-svg-components.js -i src/icons/ -o src/icons/SVGs.js` which would generate the SVGs.js file.
+In root you'd run `node ./scripts/generate-svg-components.js -i src/icons/ -o src/icons/SVGs.js` which would generate the SVGs.js file.
 
 #### Example Component
 
