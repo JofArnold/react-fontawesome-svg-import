@@ -73,17 +73,6 @@ export default SVGIcon;
 ```
 
 ```
-// styles.css
-
-.heightAdjust { height: 1em }
-.widthAdjust { height: 1em }
-.fillCurrent { fill: currentColor }
-.displayInlineFlex { display: inline-flex }
-.makeIconBigUsingFontSize { font-size: 200px }
-.makeIconRedUsingTextColor { color: red }
-```
-
-```
 // src/components/IconsInUse.js
 import React, { Component } from "react";
 import SVGIcon from "./SVGIcon";
@@ -103,10 +92,23 @@ class App extends Component {
 export default App;
 ```
 
+Useful styles to enable icon-fonts-style scaling with text size:
+
+```
+// styles.css
+
+.heightAdjust { height: 1em }
+.widthAdjust { height: 1em }
+.fillCurrent { fill: currentColor }
+.displayInlineFlex { display: inline-flex }
+.makeIconBigUsingFontSize { font-size: 200px }
+.makeIconRedUsingTextColor { color: red }
+```
+
 
 ### TODO
 
 - Turn into npm module.
 - Handle errors.
-- Process output through prettier
+- Process output through prettier.
 - Maybe webpack plugin...
