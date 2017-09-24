@@ -15,7 +15,7 @@ export {
 }
 ```
 
-I.e. the modules are a module case concatenation of their file name and their parent directory. For example `.../brands/slack-hack.svg` gets the name `BrandsSlackHash`.
+I.e. the modules are a module case *(like camelcase, but first letter is a capital... not sure what this is called)* concatenation of their file name and their parent directory. For example `.../brands/slack-hack.svg` gets the name `BrandsSlackHash`.
 
 
 ### Example Usage
