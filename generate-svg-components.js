@@ -44,10 +44,11 @@ async function main() {
         join(INPUT_PATH, dirName, fileName),
         "utf-8"
       );
-      const moduleName = moduleCase(`${dirName}-${basename(fileName, "svg")}`);
+      const moduleName = moduleCase(`${basename(fileName, "svg")}-${dirName}`);
       const processed = fileContents
         .replace(/\n|\r/g, "")
-        .replace("<svg", `<svg className={className || ""}`);
+        .replace("<svg", `<SVG className={className || ""}`)
+        .replace("</svg>", `</SVG>`);
       svgModules[moduleName] = processed;
     });
   });
@@ -67,14 +68,19 @@ async function main() {
 
   const file = `import React from "react";
 
+const SVG = ({ className, ...rest }) => (
+  <span
+    className={\`\$\{className || ""} inline-flex h--1em w--1em svgwrapper\`}
+  >
+    <svg className="h--1em w--1em fill-current" {...rest} />
+  </span>
+);
+
 ${svgDefinitions}
 
 export {${exportModules}
-};
-
-`;
+};`;
   await writeFile(OUTPUT_PATH, file);
-  console.log("👍  SVGs processed! ");
 }
 
-main();
+main().then(() => console.log("👍  SVGs processed! "));
